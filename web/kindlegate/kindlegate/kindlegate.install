@@ -1,0 +1,125 @@
+<?php
+
+// /**
+//  * Implements hook_schema().
+//  */
+// function kindlegate_schema() {
+//   $schema = [];
+
+//   // Define the schema for the 'kindlegate_product' table.
+//   $schema['kindlegate_product'] = [
+//     'description' => 'Defines the custom product entity schema.',
+//     'fields' => [
+//       'product_id' => [
+//         'type' => 'serial',
+//         'unsigned' => TRUE,
+//         'not null' => TRUE,
+//         'description' => 'Product ID',
+//       ],
+//       // 'uuid' => [
+//       //   'type' => 'uuid',
+//       //   'not null' => FALSE,
+//       //   'description' => 'UUID',
+//       // ],
+//       'title' => [
+//         'type' => 'varchar',
+//         'length' => 255,
+//         'not null' => TRUE,
+//         'description' => 'Title',
+//       ],
+//       'description__value' => [
+//         'type' => 'text',
+//         'size' => 'normal',
+//         'description' => 'Description value',
+//       ],
+//       'description__format' => [
+//         'type' => 'varchar',
+//         'length' => 255,
+//         'description' => 'Description format',
+//       ],
+//       'sku' => [
+//         'type' => 'varchar',
+//         'length' => 255,
+//         'description' => 'SKU',
+//       ],
+//       'additional_information__value' => [
+//         'type' => 'text',
+//         'size' => 'normal',
+//         'description' => 'Additional Information value',
+//       ],
+//       'additional_information__format' => [
+//         'type' => 'varchar',
+//         'length' => 255,
+//         'description' => 'Additional Information format',
+//       ],
+//       'category' => [
+//         'type' => 'int',
+//         'unsigned' => TRUE,
+//         'not null' => TRUE,
+//         'description' => 'Category',
+//       ],
+//       // ... Add other fields here based on your schema.
+//     ],
+//     'primary key' => ['product_id'],
+//     // ... Define indexes, keys, etc.
+//   ];
+
+//   // Define the schema for the 'kindlegate_image' table.
+//   $schema['kindlegate_image'] = [
+//     'description' => 'Defines the custom image entity schema.',
+//     'fields' => [
+//       'image_id' => [
+//         'type' => 'serial',
+//         'unsigned' => TRUE,
+//         'not null' => TRUE,
+//         'description' => 'Image ID',
+//       ],
+//       'filename' => [
+//         'type' => 'varchar',
+//         'length' => 255,
+//         'not null' => TRUE,
+//         'description' => 'Filename',
+//       ],
+//       'uri' => [
+//         'type' => 'varchar',
+//         'length' => 255,
+//         'not null' => TRUE,
+//         'description' => 'URI',
+//       ],
+//       'alt' => [
+//         'type' => 'varchar',
+//         'length' => 255,
+//         'description' => 'Alt',
+//       ],
+//       'product' => [
+//         'type' => 'int',
+//         'unsigned' => TRUE,
+//         'not null' => TRUE,
+//         'description' => 'Product',
+//       ],
+//       // ... Add other fields here based on your schema.
+//     ],
+//     'primary key' => ['image_id'],
+//     // ... Define indexes, keys, etc.
+//   ];
+
+//   return $schema;
+// }
+
+// /**
+//  * Implements hook_install().
+//  */
+// function kindlegate_install() {
+//   // Create the tables defined in the schema.
+//   drupal_install_schema('kindlegate_product');
+//   drupal_install_schema('kindlegate_image');
+// }
+
+// /**
+//  * Implements hook_uninstall().
+//  */
+// function kindlegate_uninstall() {
+//   // Remove the tables defined in the schema.
+//   drupal_uninstall_schema('kindlegate_product');
+//   drupal_uninstall_schema('kindlegate_image');
+// }

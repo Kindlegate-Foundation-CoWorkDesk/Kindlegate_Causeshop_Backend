@@ -1,0 +1,23 @@
+<?php
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_menu_local_tasks_alter().
+ */
+function my_module_menu_local_tasks_alter(&$data, RouteMatchInterface $route_match) {
+  // Modify menu local tasks as needed.
+}
+
+/**
+ * Implements hook_entity_type_build() or hook_entity_type_alter().
+ */
+function kindlegate_entity_type_build(array &$entity_types) {
+    // Define the "kindlegate_image" entity type.
+    // $entity_types['kindlegate_image'] = [
+    //     'base_table' => 'kindlegate_image',
+    //     // ... other necessary definitions
+    // ];
+}
+
+// Implement other custom functionality as required.

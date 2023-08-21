@@ -1,0 +1,7 @@
+commerce_product.kindlegate_product:
+  type: commerce_product
+  label: 'Kindlegate Product'
+  mapping:
+    description:
+      type: text
+      label: 'Description'

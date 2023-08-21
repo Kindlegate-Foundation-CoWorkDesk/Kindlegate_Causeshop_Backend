@@ -1,0 +1,79 @@
+# kindlegate_product:
+#   description: 'Defines the custom product entity schema.'
+#   type: mapping
+#   label: 'Kindlegate Product'
+#   mapping:
+#     product_id:
+#       type: integer
+#       label: 'Product ID'
+#       constraints:
+#         - PrimaryKey: []
+#     # uuid:
+#     #   type: string
+#     #   label: 'UUID'
+#     #   not null: true
+#     title:
+#       type: string
+#       label: 'Title'
+#       length: 255
+#       not null: true
+#     description__value:
+#       type: text
+#       label: 'Description value'
+#       size: normal
+#       constraints: {  }
+#     description__format:
+#       type: string
+#       label: 'Description format'
+#       length: 255
+#       constraints: {  }
+#     sku:
+#       type: string
+#       label: 'SKU'
+#       length: 255
+#       constraints: {  }
+#     additional_information__value:
+#       type: text
+#       label: 'Additional Information value'
+#       size: normal
+#       constraints: {  }
+#     additional_information__format:
+#       type: string
+#       label: 'Additional Information format'
+#       length: 255
+#       constraints: {  }
+#     category:
+#       type: integer
+#       label: 'Category'
+#       not null: true
+
+
+
+# kindlegate_image:
+#   description: 'Defines the custom image entity schema.'
+#   type: mapping
+#   label: 'Kindlegate Image'
+#   mapping:
+#     image_id:
+#       type: serial
+#       label: 'Image ID'
+#       unsigned: true
+#       not null: true
+#     filename:
+#       type: string
+#       label: 'Filename'
+#       length: 255
+#       not null: true
+#     uri:
+#       type: string
+#       label: 'URI'
+#       length: 255
+#       not null: true
+#     alt:
+#       type: string
+#       label: 'Alt'
+#       length: 255
+#     product:
+#       type: entity_reference
+#       label: 'Product'
+#       target entity type: kindlegate_product

@@ -1,0 +1,6 @@
+create commerce product:
+  title: 'Create Commerce Product'
+  description: 'Create a new product through the API'
+get commerce product:
+  title: 'Get Commerce Product'
+  description: 'Create all products through the API'

@@ -1,0 +1,47 @@
+<?php
+use Drupal\Core\Entity\EntityTypeManagerInterface;
+
+
+use Drupal\taxonomy\Entity\Vocabulary;
+
+
+
+
+
+/**
+ * Implements hook_install() for the kindlegate module.
+ */
+function kindlegate_install() {
+  // Define and create a product type (if not already defined).
+  $product_type = 'kindlegate_product_type';
+  $product_type_label = 'Kindlegate Product Type';
+  $entity_manager = \Drupal::service('entity_type.manager');
+  $entity_manager->getStorage('commerce_product_type')->create([
+    'id' => $product_type,
+    'label' => $product_type_label,
+    'description' => 'Product type for Kindlegate products.',
+    'variationType' => 'default',
+  ])->save();
+
+
+
+  // Define and create a vocabulary for product categories (if not already defined).
+  $vocabulary = 'product_categories';
+  $vocabulary_label = 'Product Categories';
+  $vocabulary_entity = Vocabulary::create([
+    'vid' => $vocabulary,
+    'name' => $vocabulary_label,
+    'description' => 'Vocabulary for product categories.',
+    // ... Add other settings as needed.
+  ]);
+  $vocabulary_entity->save();
+}
+
+/**
+ * Implements hook_uninstall() for the kindlegate module.
+ */
+function kindlegate_uninstall() {
+  // Perform cleanup actions if needed.
+}
+
+
