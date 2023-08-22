@@ -1,5 +1,5 @@
 <?php
-
+namespace  Drupal\kindlegate\api;
 use Drupal\http_client\HttpClient;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\DependencyInjection\DependencySerializationTrait;
